@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Erostone</title>
+	    <!-- Favicon -->
+
+    <!-- OG -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Erostone" />
+    
+    <meta property="og:image:width" content="150" />
+    <meta property="og:image:height" content="150" />
+    <meta property="og:site_name" content="Erostone" />
+    <meta property="og:description" content="Erostone" />
+
+    
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+	<link type="text/css" rel="stylesheet" href="files/erostone_2/css/styles.css"/>
+
+	<!-- JS -->
+	<script src="files/_js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="files/_js/validation.js"></script>
+	<script type="text/javascript" src="files/_js/ab.min.js"></script>
+	<script type="text/javascript" src="files/_js/timer.js"></script>
+  	<script type="text/javascript" src="files/erostone_2/js/script.js"></script>
+  	<script type="text/javascript" src="files/erostone_2/js/date_random.js"></script>
+	<script type="text/javascript">$jsonData = {"product":{"id":3145,"name":"Erostone","title":"Erostone","short_description":"Erostone","full_description":"Erostone"},"prices":{"271":{"price":990,"old_price":1980,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"RU","name":"Россия","currency":"руб.","rate":1,"phone_template":"+7 911 999-88-77","address_template":"135999, Москва, ул. Ленина, д.10, кв.5","name_template":"Петров Петр Петрович","active":true}},"lowPrice":{"year":"2019","month":"09","day":"12"}};</script>
+</head>
+<body>
+
+<script type="text/javascript">
+    var landing_notifiers = new Object(),
+            price, currency, delivery_price;
+
+	for (key in $jsonData.prices) {
+		if ($jsonData.prices[key].active) {
+			price = $jsonData.prices[key].price;
+			currency = $jsonData.prices[key].currency;
+			delivery_price = $jsonData.prices[key].price + $jsonData.prices[key].delivery_price;
+		}
+	}
+
+	landing_notifiers.params = { 
+		city			: "",
+		landDir			: "erostone_2",
+		sex				: "",
+		multiply		: "" || 0,
+		no_price		: "" || false,
+		delay			: ("" * 1000) || 12000,
+		price			: price || 0,
+		currency		: currency || "руб.",
+		delivery_price	: delivery_price,
+		geoKey			: "" || "RU",
+		zdorov			: "" || false
+	};
+</script>
+
+<script type="text/javascript" src="files/_blocks/notificators/func.js@9/index.html"></script>
+
+
+<script>
+	var formIsSubmitted = false;
+</script>
+
+<script type="text/javascript" src="files/_blocks/notificators/unload_submit.js@7/index.html"></script>
+
+
+
+
+
+
+
+
+
+        	
+<link rel="stylesheet" href="files/_blocks/callback_popup/style.css">
+<script type="text/javascript" src="files/_blocks/callback_popup/script.js"></script>
+
+<div id="cbkr">
+    <a title="Перезвонить Вам" modal="cbkr_form">
+        <div class="cbkr-circle"></div>
+        <div class="cbkr-circle-fill"></div>
+        <div class="cbkr-img-circle"></div>
+    </a>
+</div>
+
+<div id="cbkr_form" class="callbackHunter_Popup-Modal m1modal">
+    <div id="m1-form">
+        <a class="close-m1 icon-close"></a>
+        <div>
+            <div class="popup-m1-title">
+                Вам понравилось это предложение?
+            </div>
+            <div class="popup-m1-cont">
+                <div class="popup-m1-text1">
+                    Мы расскажем Вам все об этом товаре, предложим наилучшие условия и ознакомим с подходящими акционными предложениями!
+                </div>
+                <form  action="order.php"  class="popup-m1-form orderformcdn" method="post">
+<input type="hidden" name="sub1" value="">
+<input type="hidden" name="sub2" value="">
+<input type="hidden" name="sub3" value="">
+<input type="hidden" name="sub4" value="">
+<input type="hidden" name="sub5" value="">
+
+                                            <select name="country" id='country' class="country_select">
+                                                            <option value='271' selected="selected">Россия</option>
+                                                    </select>
+                                        <input name="name" placeholder="Введите ваше имя" required type="text">
+                    <input name="phone" placeholder="Введите телефон" required type="text">
+                    <div class="errField"></div>
+                    <button>Перезвоните мне</button>
+                    <input type="hidden" name="address" value="">
+                    <input type="hidden" name="product_count" id="product_count"  value="1">
+                    <input type="hidden" name="number_product"  value="3145">
+                    <input type="checkbox" checked="checked" style="position: absolute;left: -9999px; opacity: 0;">
+                    
+<input type="hidden" name="split_test_id" 	value="0">
+<input type="hidden" name="split_test" 		value="0">
+<input type="hidden" name="split_test_host" value="">
+<input type="hidden" name="fchck"           value="58f95e3081c89fcdaf54bb0fbc0b8a9ba662ec54">
+<input type="hidden" name="ucfi" id="ucfi"  value="0">
+                </form>
+                <div class="popup-m1-text2">
+                    Оператор перезвонит Вам через 5-10 минут
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+	var cbkr_popup = "" || false;
+</script>			
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                                                                                                                                                                                
+            <div class="mainwrp">
+<section id="header">
+   <div class="container">
+      <ul class="header">
+         <li class="logo" style="color: #191970; font-size:32px; font-weight:bolder;">Erostone</li>
+         <li class="line"><span class="upp ari px30 none1180">БЕСПЛАТНО КОНСУЛЬТИРУЕМ!</span></li>
+         <li>
+            <a href="#form-top" class="event_callback center px16 bold ever-popup-btn">Получить консультацию</a>
+         </li>
+      </ul>
+   </div>
+</section>
+
+<section id="slide14">
+   <div class="container">
+      <p class="title bold px35 lh140">Заполните форму заказа на нашем сайте, пока действует акция, и получите <br>Erostone <span class="nowrap"><span class="x_price_current">БЕСПЛАТНО*</span> <span class="x_currency nowrap"></span><sup></sup></span></p>
+      <div class="block-pack">
+         <p class="inf1 px16 bold lh120">Доставим быстро<br>Курьером или почтой</p>
+      </div>
+      <img class="middlesize_product" src="files/erostone_2/img/new_product.png" alt="">
+      <div class="zakaz">
+         <form  method="post" class="orderForm black order_all3 x_order_form orderformcdn"  action="order.php" >
+<input type="hidden" name="sub1" value="">
+<input type="hidden" name="sub2" value="">
+<input type="hidden" name="sub3" value="">
+<input type="hidden" name="sub4" value="">
+<input type="hidden" name="sub5" value="">
+
+            <p class="center tahoma px22 lh120 bold black">ВНИМАНИЕ! АКЦИЯ!</p>
+            <div class="cost-block">
+               <p class="inline-b old-price cost white ari px11 line-form" style="font-size:14px;">полная цена<br><span class="px26 bold od-price old_price x_price_previous"><span class="price_land_s2">1980</span></span> <span class="px22 x_currency nowrap od-price bold"><span class="price_land_curr">руб.</span></span></p>
+               <p class="normal-price inline-b cost ari px14">цена со скидкой<br><span class="px26 bold realPrice x_price_current"><span class="price_land_s1">990</span></span> <span class="px22 x_currency nowrap bold"><span class="price_land_curr">руб.</span></span><sup>*</sup></p>
+            </div>
+            <div class="cost-block cost-block-free">
+               <p class="inline-b old-price cost white  px11 line-form" style="font-size:14px;">только один день
+					<font class="endStockDate nowdate" daysint></font></p>
+               <p class="normal-price inline-b cost ari px14">«Erostone» предоставляется 
+                  <span class="pricenow"><font class="pl_product_price"><span class="price_land_s1">Бесплатно*</span></font>&nbsp;<span class="pl_product_currency" type="short"><span class="price_land_curr"></span></span></span>
+               </p>
+            </div>
+                        
+                        <input type="text" name="name" placeholder="Имя" class="name" required>
+            <input type="tel" name="phone" placeholder="Номер телефона" required class="phone phone_n3">
+            <button class="button bold sub3" type="submit" >Заказать</button>
+                        <p class="pack ari px15 bold">Осталось упаковок по акции: <span class="lastpack"><font class="p_limit_left_text">60</font> </span></p>
+            <span class="extra_1">*при оформлении заказа</span>
+            <input type="hidden" name="address" value="">
+            <input type="hidden" name="product_count" id="product_count"  value="1">
+            <input type="hidden" name="number_product"  value="3145">
+            
+<input type="hidden" name="split_test_id" 	value="0">
+<input type="hidden" name="split_test" 		value="0">
+<input type="hidden" name="split_test_host" value="">
+<input type="hidden" name="fchck"           value="58f95e3081c89fcdaf54bb0fbc0b8a9ba662ec54">
+<input type="hidden" name="ucfi" id="ucfi"  value="0">
+         </form>
+         <div class="secure">Гарантируем быструю<br>и конфиденциальную доставку</div>
+      </div>
+   </div>
+</section>
+<section id="slide14-1">
+   <div class="container">
+       <p>* - мы не обещаем и не можем гарантировать 100% результат т.к. все результаты зависят от индивидуальных свойств Вашего организма. Не является БАДом и лекарственным средством.<br><br></p>
+      <ul class="how">
+         <li>Как мы работаем:</li>
+         <li>
+            <ul class="so">
+               <li>Вы составляете<br>заявку на сайте</li>
+               <li>Мы связываемся<br>с вами</li>
+               <li>Отправляем вашу<br>посылку</li>
+               <li>Вы оплачиваете<br>при получении</li>
+            </ul>
+         </li>
+      </ul>
+      <p><span>Наши операторы онлайн</span> круглосуточно без выходных — заказывайте!</p>
+      
+   </div>
+</section>
+<div class="copyright">
+         
+      <br><a href="privacypolicy.html" target="_blank">Политика конфиденциальности</a>
+</div>
+
+
+<!--{-->
+<!-- Yandex.Metrika counter -->
+
+<!-- /Yandex.Metrika counter -->
+<!--||-->
+
+<!--}-->
+
+</body>
+</html>
